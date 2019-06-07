@@ -1,0 +1,24 @@
+/* Container */
+
+.container {
+    position: absolute;
+    background-image: url("../images/NBA-Logo.png");
+    background-size: 750px;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+
+/* Wrapper */
+
+#wrapper {
+    float: left;
+    width: 980px;
+    height: 750px;
+    padding: 20px;
+    margin: 10px;
+}
