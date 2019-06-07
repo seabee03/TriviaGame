@@ -72,3 +72,53 @@ function endGame() {
         }
 
     })
+    $.each($("input[name='question-1']:checked"), function() {
+        var userChoice = $(this).val();
+        if (userChoice == questions[1].correctAnswer) {
+            correct++;
+        } else {
+            incorrect++;
+        }
+
+    })
+    $.each($("input[name='question-2']:checked"), function() {
+        var userChoice = $(this).val();
+        if (userChoice == questions[2].correctAnswer) {
+            correct++;
+        } else {
+            incorrect++;
+        }
+
+    })
+    $.each($("input[name='question-3']:checked"), function() {
+        var userChoice = $(this).val();
+        if (userChoice == questions[3].correctAnswer) {
+            correct++;
+        } else {
+            incorrect++;
+        }
+
+    })
+
+    // This function is to check the results, clears the timer
+    checkResult();
+}
+
+function checkResult() {
+    console.log("inside checkResult")
+    clearInterval(timer);
+    $("#sub-wrapper h2").remove();
+
+    $("#quiz-area").html("<h2>All Done</h2>");
+    $("#quiz-area").append("<h3>Correct Answers: " + this.correct + "</h3>");
+    $("#quiz-area").append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
+
+}
+
+// enables the click event
+$(document).on("click", "#start", function() {
+    start();
+})
+$(document).on("click", "#done", function() {
+    endGame();
+})
