@@ -48,3 +48,14 @@ function start() {
     }
     // Once the user is done with the questions, click done
     $("#quiz-area").append("<button id='done'>Done</button>");
+}
+
+// End game when counter gets to 0
+function countdown() {
+    counter--;
+    $("#counter-number").html(counter);
+    if (counter === 0) {
+        console.log("time is up");
+        endGame();
+    }
+}
