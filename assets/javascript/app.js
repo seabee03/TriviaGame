@@ -24,3 +24,27 @@ var questions = [{
     ],
     correctAnswer: "Toronto Raptors"
 }]
+
+// User will have 120 seconds to complete the trivia
+var correct = 0;
+var incorrect = 0;
+var counter = 120;
+
+// Countdown
+function start() {
+    timer = setInterval(countdown, 1000);
+    $("#sub-wrapper").prepend("<h2>Time Remaining: <span id='counter-number'>120</span> Seconds</h2>")
+    $("#start").remove();
+
+    // Start the questions
+    for (var i = 0; i < questions.length; i++) {
+        $("#quiz-area").append("<h2>" + questions[i].question + "</h2>");
+        for (var j = 0; j < questions[i].answers.length; j++) {
+            $("#quiz-area").append("<input type='radio' name='question-" + i +
+                "' value='" + questions[i].answers[j] + "''>" + questions[i].answers[j]);
+        }
+
+
+    }
+    // Once the user is done with the questions, click done
+    $("#quiz-area").append("<button id='done'>Done</button>");
