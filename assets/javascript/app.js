@@ -59,3 +59,16 @@ function countdown() {
         endGame();
     }
 }
+
+// counts the users choices for correct or incorrect
+function endGame() {
+    console.log("inside endGame")
+    $.each($("input[name='question-0']:checked"), function() {
+        var userChoice = $(this).val();
+        if (userChoice == questions[0].correctAnswer) {
+            correct++;
+        } else {
+            incorrect++;
+        }
+
+    })
