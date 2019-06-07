@@ -3,13 +3,14 @@
 .container {
     position: absolute;
     background-image: url("../images/NBA-Logo.png");
-    background-size: 750px;
+    background-size: 600px;
     background-repeat: no-repeat;
     text-align: center;
 }
 
 h1 {
     font-size: 24px;
+    font-family: cursive;
 }
 
 
@@ -22,3 +23,12 @@ h1 {
     padding: 20px;
     margin: 10px;
 }
+
+h2 {
+    font-family: cursive;
+}
+
+
+/* i am having trouble with making the NBA logo transparent, centered. 
+I am also having trouble changing font of "correct answers/incorrect answers". I honestly am not sure if i am on track
+with the class. I feel dumb!!*/
