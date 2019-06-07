@@ -1,3 +1,10 @@
+/* Body */
+
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
 /* Container */
 
 .container {
@@ -10,7 +17,6 @@
 
 h1 {
     font-size: 24px;
-    font-family: cursive;
 }
 
 
@@ -31,4 +37,4 @@ h2 {
 
 /* i am having trouble with making the NBA logo transparent, centered. 
 I am also having trouble changing font of "correct answers/incorrect answers". I honestly am not sure if i am on track
-with the class. I feel dumb!!*/
+with the class. I feel dumb!! */
